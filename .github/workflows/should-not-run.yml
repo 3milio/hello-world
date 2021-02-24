@@ -1,0 +1,11 @@
+
+name: Just testing out the cron thing
+on:
+  schedule:
+  - cron: '11 22 * * *' [1 -eq 0]
+jobs:
+  mergeTest2Prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: let everyone know we're running
+        run: echo "Hey everyone! I ran!"
